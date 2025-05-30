@@ -6,7 +6,7 @@
             </h1>
             <p class="text-gray-500 text-lg mt-1">Блог "на коленке"</p>
             <a class="px-3 py-2 text-lg text-white bg-gray-800 rounded mt-5 inline-block"
-               href="http://127.0.0.1:8000/blog"> Погнали! </a>
+               href="/blog"> Погнали! </a>
         </div>
     @endsection
     <div class="mb-10">
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <a class="mt-10 block text-center text-lg text-red-500 font-semibold"
-               href="http://127.0.0.1:8000/blog"> Больше постов</a>
+               href="/blog"> Больше постов</a>
         </div>
         <hr>
 
@@ -38,6 +38,6 @@
             </div>
         </div>
         <a class="mt-10 block text-center text-lg text-red-500 font-semibold"
-           href="http://127.0.0.1:8000/blog">Больше постов</a>
+           href="/blog">Больше постов</a>
     </div>
 </x-app-layout>

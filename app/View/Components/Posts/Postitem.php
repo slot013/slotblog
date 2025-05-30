@@ -21,6 +21,6 @@ class Postitem extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.posts.postitem');
+        return view('components.posts.post-item');
     }
 }
