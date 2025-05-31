@@ -12,7 +12,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $categories = Cache::remember('categories', now()->addDays(3), function () {
+        $categories = Cache::remember('categories', now()->addMinute(), function () {
             return Category::whereHas('posts', function ($query) {
                 $query->published();
             })->take(10)->get();
