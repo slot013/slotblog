@@ -14,11 +14,11 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $featuredPosts = Cache::remember('featuredPosts', now()->addDay(), function () {
+        $featuredPosts = Cache::remember('featuredPosts', now()->addMinutes(3), function () {
             return Post::published()->featured()->with('categories')->latest('published_at')->take(3)->get();
         });
 
-        $latestPosts = Cache::remember('latestPosts', now()->addDay(), function () {
+        $latestPosts = Cache::remember('latestPosts', now()->addMinutes(3), function () {
             return Post::published()->with('categories')->latest('published_at')->take(9)->get();
         });
 
